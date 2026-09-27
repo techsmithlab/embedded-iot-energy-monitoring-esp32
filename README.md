@@ -238,9 +238,9 @@ and cloud validation are complete.
 
 **Project/Brand:** Techsmithlab
 
-- Author: [YOUR NAME]
-- GitHub: [YOUR GITHUB URL]
-- LinkedIn: [YOUR LINKEDIN URL]
+- Author: [SAMITH R]
+- GitHub: [https://github.com/techsmithlab]
+- LinkedIn: [https://www.linkedin.com/company/113026202/]
 - Website: https://techsmithlab.com
 
 ## License
