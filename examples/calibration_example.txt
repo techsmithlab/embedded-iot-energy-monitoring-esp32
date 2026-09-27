@@ -1,0 +1,20 @@
+Example calibration session (illustrative format only - not a claim of
+final calibrated accuracy for this specific build).
+
+Step 1: Zero-offset measurement (ACS712), mains disconnected, no current:
+  Raw ADC samples averaged (1000 samples): 2935
+  -> Set ACS_ADC_MIDPOINT_DEFAULT = 2935 in config.h
+
+Step 2: Zero-offset measurement (ZMPT101B), no AC input connected:
+  Raw ADC samples averaged (1000 samples): <measure on your own module>
+  -> Set ZMPT_ADC_MIDPOINT_DEFAULT accordingly in config.h
+
+Step 3 (REQUIRES VALIDATION - not yet performed for this build):
+  Apply a known safe reference current/voltage, compare ADC-RMS output
+  against a trusted reference meter, and compute:
+    CURRENT_CALIBRATION_FACTOR = known_Irms / measured_ADC_RMS_current
+    VOLTAGE_CALIBRATION_FACTOR = known_Vrms / measured_ADC_RMS_voltage
+
+Until Step 3 is completed and documented with real measured values, do
+not treat this project's voltage/current/power/energy readings as
+calibrated, accurate measurements.

@@ -1,0 +1,27 @@
+# Real credentials - never commit
+firmware/smart_energy_monitor/config.h
+
+# Arduino build artifacts
+build/
+*.bin
+*.elf
+*.map
+*.hex
+
+# Arduino IDE temp files
+*.tmp
+.arduino15/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor/IDE files
+.vscode/
+.idea/
+*.swp
+
+# PlatformIO (if used instead of Arduino IDE)
+.pio/
+.pioenvs/
+.piolibdeps/

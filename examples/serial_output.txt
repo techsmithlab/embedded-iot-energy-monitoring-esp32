@@ -1,0 +1,29 @@
+Example Serial Monitor output (115200 baud) from the main firmware.
+NOTE: Vrms/Irms values below are placeholder-scaled (calibration factors
+= 1.0) and are NOT real volts/amps until calibration is completed. See
+docs/SENSOR_CALIBRATION.md.
+
+=== Smart Energy Monitor booting ===
+[WiFi] Connecting to YOUR_WIFI_NAME.......
+[WiFi] Connected. IP: 192.168.1.42
+=== Setup complete ===
+Serial commands: ON, OFF, STATUS, CAL, CALSTATUS
+[SENSOR] Vrms(raw-scaled)=12.430 Irms(raw-scaled)=0.512 S(approx)=6.364 Energy(kWh)=0.0002
+[SENSOR] Vrms(raw-scaled)=12.410 Irms(raw-scaled)=0.508 S(approx)=6.304 Energy(kWh)=0.0004
+STATUS
+[RELAY] State: OFF
+ON
+[RELAY] Turned ON
+[SENSOR] Vrms(raw-scaled)=12.398 Irms(raw-scaled)=0.601 S(approx)=7.451 Energy(kWh)=0.0007
+CAL
+=================================================
+ CALIBRATION: ZERO-OFFSET MEASUREMENT
+ Ensure ACS712 carries ZERO current and ZMPT101B
+ has no AC input connected before continuing.
+=================================================
+[CAL] ACS712 zero-offset ADC (avg of 1000 samples): 2935
+[CAL] ZMPT101B zero-offset ADC (avg of 1000 samples): 2048
+[CAL] Update ACS_ADC_MIDPOINT_DEFAULT / ZMPT_ADC_MIDPOINT_DEFAULT
+[CAL] in config.h with these values, then recompile.
+[CAL] This does NOT calibrate scale factors (V/A per ADC count).
+[CAL] Follow docs/SENSOR_CALIBRATION.md for full calibration.
